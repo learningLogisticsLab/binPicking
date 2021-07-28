@@ -115,6 +115,9 @@ cfg.SOLVER.GAMMA        = 0.1
 cfg.SOLVER.STEPS        = (120_000,)
 cfg.SOLVER.WEIGHT_DECAY = 0.000_1
 
+
+#   ROI_HEADS.BATCH_SIZE_PER_IMAGE * SOLVER.IMS_PER_BATCH
+#   E.g., a common configuration is: 512 * 16 = 8192
 # Detectron default 16
 cfg.SOLVER.IMS_PER_BATCH = 32
 # Detectron default 512
