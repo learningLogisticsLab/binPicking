@@ -1,0 +1,19 @@
+<mujoco model="$MODEL_SHORT">
+  <asset>
+    <mesh name="$MODEL_SHORT_mesh" file="./$MESH_MODEL_SHORT_FILE" scale="$RATIO $RATIO $RATIO"/>
+    <texture name="tex-$MODEL_SHORT" file="./$TEXTURE_MODEL_SHORT_FILE" type="2d"/>
+    <material name="$MODEL_SHORT" reflectance="0.7" texrepeat="15 15" texture="tex-$MODEL_SHORT" texuniform="true"/>
+  </asset>
+  <worldbody>
+    <body>
+      <body name="object">
+        <inertial pos="$COM" mass="$MASS" fullinertia="$IXX $IYY $IZZ $IXY $IXZ $IYZ"/>
+        <geom name="$MODEL_SHORT" pos="0 0 0" mesh="$MODEL_SHORT_mesh" type="mesh" solimp="0.998 0.998 0.001" solref="0.001 1" mass="$MASS" friction="0.95 0.3 0.1"  material="$MODEL_SHORT" group="0" condim="4"/>
+      </body>
+      <site rgba="1 0 0 1" size="0.005" pos="0 0 $BOTTOM" name="bottom_site"/>
+      <site rgba="0 1 0 1" size="0.005" pos="0 0 $UPPER" name="top_site"/>
+      <site rgba="0 0 1 1" size="0.005" pos="$RADIUS $RADIUS 0" name="horizontal_radius_site"/>
+      <site rgba="0 0 0 1" size="0.005" pos="0 0 $VERTICAL_RADIUS" name="vertical_radius_site"/>
+    </body>
+  </worldbody>
+</mujoco>

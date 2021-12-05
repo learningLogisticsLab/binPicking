@@ -1,0 +1,18 @@
+from .xml_objects import(
+    BottleObject,
+    CanObject,
+    MasterChefCanObject,
+    LemonObject,
+    MilkObject,
+    BreadObject,
+    CerealObject,
+    SquareNutObject,
+    RoundNutObject,
+    MilkVisualObject,
+    BreadVisualObject,
+    CerealVisualObject,
+    CanVisualObject,
+    MasterChefCanVisualObject,
+    PlateWithHoleObject,
+    DoorObject,
+#--------------------------------
